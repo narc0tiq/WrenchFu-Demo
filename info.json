@@ -1,0 +1,10 @@
+{
+    "name":"WrenchFu-Demo",
+    "version":"{{VERSION}}",
+    "title":"WrenchFu Demonstrator",
+    "author": "Octav \"narc\" Sandulescu",
+    "contact": "factorio-mods@narc.ro",
+    "homepage": "https://github.com/narc0tiq/WrenchFu-Demo/",
+    "description": "Uses WrenchFu to show a naming GUI on assembling machines when they're wrenched.",
+    "dependencies": ["base >= 0.12.0", "WrenchFu"]
+}
