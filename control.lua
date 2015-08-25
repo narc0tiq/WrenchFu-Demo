@@ -21,6 +21,8 @@ local function show_gui(player_index, ent_name, position)
 
     root.add{type="textfield", name="new_name", text=ent.backer_name}
     root.add{type="button", name="assembly_naming_close", caption={"assembly-naming-close"}}
+
+    root.new_name.text = ent.backer_name
 end
 
 
