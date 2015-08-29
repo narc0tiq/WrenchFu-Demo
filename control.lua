@@ -74,6 +74,14 @@ end
 remote.add_interface("WrenchFu-Demo", interface)
 
 
-remote.call("WrenchFu", "register", "assembling-machine-1", "WrenchFu-Demo", "show_naming_gui", "hide_naming_gui")
-remote.call("WrenchFu", "register", "assembling-machine-2", "WrenchFu-Demo", "show_naming_gui", "hide_naming_gui")
-remote.call("WrenchFu", "register", "assembling-machine-3", "WrenchFu-Demo", "show_naming_gui", "hide_naming_gui")
+game.on_init(function()
+    remote.call("WrenchFu", "register", "assembling-machine-1", "WrenchFu-Demo", "show_naming_gui", "hide_naming_gui")
+    remote.call("WrenchFu", "register", "assembling-machine-2", "WrenchFu-Demo", "show_naming_gui", "hide_naming_gui")
+    remote.call("WrenchFu", "register", "assembling-machine-3", "WrenchFu-Demo", "show_naming_gui", "hide_naming_gui")
+end)
+
+game.on_load(function()
+    remote.call("WrenchFu", "register", "assembling-machine-1", "WrenchFu-Demo", "show_naming_gui", "hide_naming_gui")
+    remote.call("WrenchFu", "register", "assembling-machine-2", "WrenchFu-Demo", "show_naming_gui", "hide_naming_gui")
+    remote.call("WrenchFu", "register", "assembling-machine-3", "WrenchFu-Demo", "show_naming_gui", "hide_naming_gui")
+end)
