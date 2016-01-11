@@ -53,7 +53,7 @@ local function gui_click(event)
 end
 
 
-game.on_event(defines.events.on_gui_click, function(event)
+script.on_event(defines.events.on_gui_click, function(event)
     local status, err = pcall(gui_click, event)
     if err then notify_error({"WrenchFu-Demo-error", err}) end
 end)
@@ -74,13 +74,13 @@ end
 remote.add_interface("WrenchFu-Demo", interface)
 
 
-game.on_init(function()
+script.on_init(function()
     remote.call("WrenchFu", "register", "assembling-machine-1", "WrenchFu-Demo", "show_naming_gui", "hide_naming_gui")
     remote.call("WrenchFu", "register", "assembling-machine-2", "WrenchFu-Demo", "show_naming_gui", "hide_naming_gui")
     remote.call("WrenchFu", "register", "assembling-machine-3", "WrenchFu-Demo", "show_naming_gui", "hide_naming_gui")
 end)
 
-game.on_load(function()
+script.on_load(function()
     remote.call("WrenchFu", "register", "assembling-machine-1", "WrenchFu-Demo", "show_naming_gui", "hide_naming_gui")
     remote.call("WrenchFu", "register", "assembling-machine-2", "WrenchFu-Demo", "show_naming_gui", "hide_naming_gui")
     remote.call("WrenchFu", "register", "assembling-machine-3", "WrenchFu-Demo", "show_naming_gui", "hide_naming_gui")
